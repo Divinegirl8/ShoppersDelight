@@ -1,7 +1,8 @@
+set foreign_key_checks = 0;
 truncate table product cascade;
 truncate table item cascade;
 truncate table customer cascade;
--- truncate table customer_order cascade;
+truncate table customer_order cascade;
 truncate table cart cascade;
 truncate table cart_items cascade;
 

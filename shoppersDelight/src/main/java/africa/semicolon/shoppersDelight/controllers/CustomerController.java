@@ -26,6 +26,11 @@ public class CustomerController {
                 .body(customerService.register(registrationRequest));
     }
 
+    @GetMapping("getCustomer/{id}")
+    public ResponseEntity<?> getCustomer(@PathVariable("id") Long id){
+        return ResponseEntity.ok(customerService.getCustomerBy(id));
+    }
+
     @PatchMapping("/{id}")
     public ResponseEntity<?> updateCustomer(@RequestBody UpdateCustomerRequest request, @PathVariable Long id) {
         try {
